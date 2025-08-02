@@ -18,5 +18,6 @@ app.get("/api/user", (req, res) => {
   res.json(userData);
 });
 
-const PORT = 5000;
-app.listen(PORT, () => console.log(`✅ Backend running on http://localhost:${PORT}`));
+// ✅ Use Render's port if available
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log(`✅ Backend running on port ${PORT}`));
